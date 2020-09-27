@@ -1,4 +1,9 @@
+
+
 <div class="container-fluid pt-3">
+  <div class="col-md-3 p-6" >
+    <app-create-quote (addQuote)="newQuote($event)"></app-create-quote> 
+   </div>
     <div class="row">
         <div *ngFor='let quote of quotes' class="col-md-4 mb-4 d-flex align-items-stretch">
             <div class="card" style="width: 18rem;">
@@ -14,11 +19,7 @@
               </div>
         </div>
     </div> 
-       
-       
-     
-   
-</div>
+<div>
 
 
 
