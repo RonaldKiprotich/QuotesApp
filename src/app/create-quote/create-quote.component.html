@@ -19,11 +19,11 @@
         </div>
         <div class="modal-body">
 
-            <form #goalForm='ngForm'>
+            <form (ngSubmit)='submitQuote' #goalForm='ngForm'>
                 <div class="form-group">
           
                     <label for="name">Author</label>
-                    <input type="text" class="form-control" id="author" name="author"  required>
+                    <input [(ngModel)]="newQuote.author" type="text" class="form-control" id="author" name="author"  required>
                     <div class="alert alert-danger">
                       <p>Author is required</p>
                     </div>
@@ -31,7 +31,7 @@
                 <div class="form-group">
           
                     <label for="name">Title</label>
-                    <input type="text" class="form-control" id="title" name="title"  required>
+                    <input [(ngModel)]="newQuote.title" type="text" class="form-control" id="title" name="title"  required>
                     <div class="alert alert-danger">
                       <p>Title is required</p>
                     </div>
@@ -39,7 +39,7 @@
                 <div class="form-group">
           
                     <label for="quote">Quote</label>
-                    <textarea class="form-control" id="quote" rows="4"  name="quote"  required></textarea>
+                    <textarea [(ngModel)]="newQuote.quote" class="form-control" id="quote" rows="4"  name="quote"  required></textarea>
                     <div  class="alert alert-danger">
                       <p>Quote is required</p>
                     </div>
@@ -47,7 +47,7 @@
                 <div class="form-group">
           
                   <label for="name">Publisher</label>
-                  <input type="text" class="form-control" id="publisher" name="publisher"  required>
+                  <input [(ngModel)]="newQuote.submitedBy" type="text" class="form-control" id="publisher" name="publisher"  required>
                   <div class="alert alert-danger">
                     <p>Publisher is required</p>
                   </div>
