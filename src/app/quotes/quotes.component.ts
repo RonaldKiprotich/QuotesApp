@@ -9,9 +9,11 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
   quotes: Quotes[]=[
-    new Quotes('lorem','coding','building an application using angular'),
-    new Quotes('lorem','xxxxx', 'i will be reading a book called everything is fucked up'),
-    new Quotes('lorem', 'xxxxxxxx','playing pool games and cards')
+    new Quotes('Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
+    new Quotes('Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
+    new Quotes('Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
+    new Quotes('Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
+   
   ]
   constructor() { }
 

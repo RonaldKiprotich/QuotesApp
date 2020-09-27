@@ -1,7 +1,11 @@
 export class Quotes {
     constructor(
-        public name: string,
+        public author: string,
         public title: string,
-        public description: string
+        public quote: string,
+        public upvote:number,  
+        public downvote:number,
+        public submitedBy: string,
+        public date:Date
          ){}
 }
