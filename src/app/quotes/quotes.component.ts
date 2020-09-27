@@ -15,6 +15,10 @@ export class QuotesComponent implements OnInit {
     new Quotes(3,'Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
    
   ]
+  upVotes = 0;
+  downVotes = 0;
+  isComplete= true
+
   getCurrentId(){
     return this.quotes.length +1
   }
@@ -25,6 +29,20 @@ export class QuotesComponent implements OnInit {
     quote.quote=quote.quote;
     quote.submitedBy=quote.submitedBy;
     this.quotes.unshift(quote)
+  }
+
+  thumbsUp(myQuote){
+    myQuote.upVotes= myQuote.upVotes+1;
+  }
+
+  quoteDelete(isComplete, index){
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
   }
   constructor() { }
 
