@@ -21,18 +21,18 @@
                     <span class="row">
                      
                       
-                      <a class="pr-5">
-                        <i style='font-size:48px;color:rgb(16, 133, 26)' class="far fa-thumbs-up" (click)='upVote(quote)'></i>{{quote.upvotes}}
+                      <a class="pr-5">Like
+                        <i style='font-size:30px;color:rgb(16, 133, 26)' class="far fa-thumbs-up" (click)='upVote(quote)'></i>{{quote.upvotes}}
                       </a>
-                      <a class="pr-5">
-                        <i style='font-size:48px;color:red' (click)='downVote(quote)' class="far fa-thumbs-down"></i>{{quote.downvotes}}
+                      <a class="pr-5">Dislike
+                        <i style='font-size:30px;color:red' (click)='downVote(quote)' class="far fa-thumbs-down"></i>{{quote.downvotes}}
 
                       </a>
-                      <a>
-                        <i style='font-size:48px;color:red' (click)= 'quoteDelete($event,delete)' class="fas fa-trash"></i>
+                      <a>Delete
+                        <i style='font-size:30px;color:red' (click)= 'quoteDelete($event,delete)' class="fas fa-trash"></i>
 
                       </a>
-                      <p class="pl-5">{{quote.date | dateCount}} days ago</p>
+                      <p class="pl-5">Submited {{quote.date | dateCount}} days ago</p>
                       
                     </span>
                   </div>
