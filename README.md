@@ -15,7 +15,8 @@ Ronald-Kiprotich: https://github.com/RonaldKiprotich
 
 ## Live Demo
 To view this page, use the link: https://ronaldkiprotich.github.io/QuotesApp/
-
+## Figma Design
+https://www.figma.com/file/kTkRh5sjyOVgLQ2Fo8Vm3E/quote?node-id=0%3A1
 ## Known Bugs
 * The page works as expected so there are no bugs. 
 ## Behaviour Driven Development(BDD)

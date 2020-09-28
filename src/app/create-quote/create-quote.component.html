@@ -3,7 +3,7 @@
     <p>This is a platform that allows users to view quotes,thumbs up, thumbs down and even add their own quotes. Let's get inspired together.</p>
 </div>
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn green" data-toggle="modal" data-target="#exampleModal">
     <i class="fas fa-plus-square"></i>
     New Quote
   </button>
@@ -52,6 +52,7 @@
                   <div [hidden]="submitedBy.valid || submitedBy.pristine" class="alert alert-danger">
                     <p>publisher is required</p>
                 </div>
+                <label for="date">Date Submited</label>
                 <input type='date'>
               </div>    
                 <div class="modal-footer">
