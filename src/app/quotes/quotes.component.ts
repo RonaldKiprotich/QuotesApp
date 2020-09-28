@@ -10,7 +10,7 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
   quotes: Quotes[]=[
     new Quotes(0,'Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
-    new Quotes(1,'Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
+    new Quotes(1,'Albert Einstein','Technology & Humanity','I fear the day when the technology overlaps with our humanity. The world will only have a generation of idiots.',0,0,'Mutahi Kagwe',new Date()),
    
    
   ]

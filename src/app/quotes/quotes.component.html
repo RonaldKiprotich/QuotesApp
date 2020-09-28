@@ -10,16 +10,26 @@
         <div class='col-md'>
           <div class='row'>
             <div *ngFor='let quote of quotes;let delete =index' class="col-md-6 mb-4 d-flex align-items-stretch">
-              <div class="card" style="width: 18rem;">
+              <div class="card" style="width: 40rem;">
                   <div class="card-body">
                     <h5 class="card-title">{{quote.author}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{quote.title}}</h6>
                     <p class="card-text">{{quote.quote}}</p>
                     <span class="row">Submited By:<p>{{quote.submitedBy}}</p></span>
                     <span class="row">
-                      <p class="pr-5"><i style='font-size:48px;color:rgb(16, 133, 26)' class="far fa-thumbs-up"(click)="thumbsUp(quote)"></i>{{quote.upvote}}</p>
-                      <p class=""><i style='font-size:48px;color:red' class="far fa-thumbs-down"></i>{{quote.downvote}}</p>
-                      <p ><i style='font-size:48px;color:red' (click)= 'quoteDelete($event,delete)' class="fas fa-trash"></i></p>
+                      <a class="pr-5">
+                        <i style='font-size:48px;color:rgb(16, 133, 26)' class="far fa-thumbs-up"(click)="thumbsUp(quote)"></i>{{quote.upvote}}
+
+                      </a>
+                      <a class="pr-5">
+                        <i style='font-size:48px;color:red' class="far fa-thumbs-down"></i>{{quote.downvote}}
+
+                      </a>
+                      <a>
+                        <i style='font-size:48px;color:red' (click)= 'quoteDelete($event,delete)' class="fas fa-trash"></i>
+
+                      </a>
+                      
                     </span>
                   </div>
                 </div>
