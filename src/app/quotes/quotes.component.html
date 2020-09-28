@@ -15,10 +15,12 @@
               <div class="card" style="width: 40rem;">
                   <div class="card-body">
                     <h5 class="card-title">{{quote.author}}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{quote.title}}</h6>
+                    <h6 class="card-subtitle mb-2">{{quote.title}}</h6>
                     <p class="card-text">{{quote.quote}}</p>
                     <span class="row">Submited By:<p>{{quote.submitedBy}}</p></span>
                     <span class="row">
+                     
+                      
                       <a class="pr-5">
                         <i style='font-size:48px;color:rgb(16, 133, 26)' class="far fa-thumbs-up" (click)='upVote(quote)'></i>{{quote.upvotes}}
                       </a>
@@ -30,6 +32,7 @@
                         <i style='font-size:48px;color:red' (click)= 'quoteDelete($event,delete)' class="fas fa-trash"></i>
 
                       </a>
+                      <p class="pl-5">{{quote.date | dateCount}} days ago</p>
                       
                     </span>
                   </div>
