@@ -11,8 +11,7 @@ export class QuotesComponent implements OnInit {
   quotes: Quotes[]=[
     new Quotes(0,'Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
     new Quotes(1,'Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
-    new Quotes(2,'Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
-    new Quotes(3,'Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
+   
    
   ]
   upVotes = 0;
