@@ -8,15 +8,16 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quotes.component.css']
 })
 export class QuotesComponent implements OnInit {
+  upvotes = 0;
+  downvotes = 0;
+  isComplete= true;
+
   quotes: Quotes[]=[
     new Quotes(0,'Paulo Coelho','Inspiration','There is only one thing that makes a dream impossible to achieve: the fear of failure.',0,0,'Ronald',new Date()),
     new Quotes(1,'Albert Einstein','Technology & Humanity','I fear the day when the technology overlaps with our humanity. The world will only have a generation of idiots.',0,0,'Mutahi Kagwe',new Date()),
    
-   
-  ]
-  upVotes = 0;
-  downVotes = 0;
-  isComplete= true
+  ];
+  
 
   getCurrentId(){
     return this.quotes.length +1
@@ -30,8 +31,12 @@ export class QuotesComponent implements OnInit {
     this.quotes.unshift(quote)
   }
 
-  thumbsUp(myQuote){
-    myQuote.upVotes= myQuote.upVotes+1;
+  upVote(quote){
+    quote.upvotes= quote.upvotes+1;
+    console.log('quote.upvote')
+  }
+  downVote(quote){
+    quote.downvotes = quote.downvotes+1;
   }
 
   quoteDelete(isComplete, index){

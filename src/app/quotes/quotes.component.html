@@ -1,15 +1,17 @@
+<div class="body">
+
 
     <div class='container-fluid'>
       <div class='row'>
-        <div class='col'>
+        <div class='col-md-6'>
           <div>
             <app-create-quote (addQuote)="newQuote($event)"></app-create-quote> 
            </div>
 
         </div>
-        <div class='col-md'>
-          <div class='row'>
-            <div *ngFor='let quote of quotes;let delete =index' class="col-md-6 mb-4 d-flex align-items-stretch">
+        <div class=' row col-md-6'>
+          
+            <div *ngFor='let quote of quotes;let delete =index' class="mb-4 d-flex align-items-stretch">
               <div class="card" style="width: 40rem;">
                   <div class="card-body">
                     <h5 class="card-title">{{quote.author}}</h5>
@@ -18,11 +20,10 @@
                     <span class="row">Submited By:<p>{{quote.submitedBy}}</p></span>
                     <span class="row">
                       <a class="pr-5">
-                        <i style='font-size:48px;color:rgb(16, 133, 26)' class="far fa-thumbs-up"(click)="thumbsUp(quote)"></i>{{quote.upvote}}
-
+                        <i style='font-size:48px;color:rgb(16, 133, 26)' class="far fa-thumbs-up" (click)='upVote(quote)'></i>{{quote.upvotes}}
                       </a>
                       <a class="pr-5">
-                        <i style='font-size:48px;color:red' class="far fa-thumbs-down"></i>{{quote.downvote}}
+                        <i style='font-size:48px;color:red' (click)='downVote(quote)' class="far fa-thumbs-down"></i>{{quote.downvotes}}
 
                       </a>
                       <a>
@@ -35,13 +36,13 @@
                 </div>
           </div>
   
-          </div>
 
         </div>
         
 
       </div>
     </div>
+  </div>
 
 
 
